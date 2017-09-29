@@ -1,0 +1,21 @@
+<div class = 'user-cnt'>
+  <h2>Авторизация</h2>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <div class = 'std-field'>
+      <%= f.label 'Email' %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <div class = 'std-field'>
+      <%= f.label 'Пароль' %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <div class = 'std-btn'>
+      <%= f.submit "Авторизоваться" %>
+    </div>
+  <% end %>
+
+</div>

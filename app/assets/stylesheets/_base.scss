@@ -1,0 +1,65 @@
+html, body {
+	font-family: 'PT Sans', sans-serif;
+	// overflow-x: hidden;
+	font-size: 0;
+	color: $text_color;
+}
+
+html, body, section, header, footer, h1, h2, h3, h4, h5, h6, p, ul, li, span {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	color: $link_color;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.app-cnt {
+	min-width: 500px;
+	background-color: $bg_color;
+}
+
+.std-field input {
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 16px;
+	height: 30px;
+	padding: 5px;
+}
+
+.std-btn {
+	text-align: center;
+}
+
+.std-btn input[type='submit'] {
+	color: $text_color;
+	font-size: 16px;
+	padding: 6px 18px;
+}
+
+input[type='submit']:hover {
+	cursor: pointer;
+}
+
+.std-errors-cnt h2 {
+	font-size: 16px;
+	margin: 10px 0px;
+}
+
+.std-errors-cnt li {
+	margin: 5px 0px;
+	font-size: 12px;
+}

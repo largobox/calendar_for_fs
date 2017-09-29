@@ -1,0 +1,40 @@
+<div class = 'user-cnt'>
+  <h2>Регистрация</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+    <div class = 'std-errors-cnt'>
+      <%= devise_error_messages! %>
+    </div>
+
+    <div class = 'std-field'>
+      <%= f.label 'Email*' %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <div class = 'std-field'>
+      <%= f.label 'Пароль*' %>
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <div class = 'std-field'>
+      <%= f.label 'Подтверждение пароля*' %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+
+    <div class = 'std-field'>
+      <%= f.label 'Имя' %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class = 'std-field'>
+      <%= f.label 'Фамилия' %>
+      <%= f.text_field :second_name %>
+    </div>        
+
+    <div class = 'std-btn'>
+      <%= f.submit 'Зарегистрироваться' %>
+    </div>
+  <% end %>
+
+</div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calendar</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <p class = 'notice'><%= notice %></p>
+    <p class = 'alert'><%= alert %></p>
+
+  	<div class = 'app-cnt'>
+  		<header>
+        <%= link_to root_path do %>
+          <div class = 'logo-cnt'><span>Event Calendar</span></div>
+        <% end %>
+        <nav>
+  				<ul>
+          <% if current_user %>
+            <li><%= link_to 'Выйти', destroy_user_session_path, method: :delete %></li>
+  					<li><%= link_to 'Профиль', edit_user_registration_path %></li>
+          <% else %>
+            <li><%= link_to 'Войти', new_user_session_path %></li>
+            <li><%= link_to 'Регистрация', new_user_registration_path %></li>
+          <% end %>
+  				</ul>
+  			</nav>
+  		</header>
+  		<section class = 'content-cnt'>
+  			<div class = 'content-inner-cnt'>
+        	<%= yield %>
+  			</div>
+  		</section>
+  	</div>
+  </body>
+</html>
