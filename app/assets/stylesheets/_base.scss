@@ -32,7 +32,20 @@ a:hover {
 	background-color: $bg_color;
 }
 
-.std-field input {
+.std-form-cnt {
+	padding: 10px;
+	margin: 0px auto;
+	padding-top: 20px;
+	width: 400px;
+	background-color: $bg_2_color;
+	border-radius: 6px;
+}
+
+.std-form-cnt h2 {
+	text-align: center;
+}
+
+.std-field input, .std-field select {
 	box-sizing: border-box;
 	width: 100%;
 	margin-bottom: 16px;
@@ -55,11 +68,21 @@ input[type='submit']:hover {
 }
 
 .std-errors-cnt h2 {
+	display: none;
 	font-size: 16px;
 	margin: 10px 0px;
 }
 
+.std-errors-cnt ul {
+	margin: 10px 0px;
+}
+
 .std-errors-cnt li {
+	color: $error_color;
 	margin: 5px 0px;
 	font-size: 12px;
+}
+
+.notice {
+	font-size: 14px;
 }

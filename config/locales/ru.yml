@@ -36,15 +36,25 @@ ru:
         user:
           attributes:
             email: 
-              blank: "Не может быть пустым"
+              blank: "не может быть пустым"
             password: 
-              blank: "Не может быть пустым"
-              too_short: "Пароль слишком короткий"
+              blank: "не может быть пустым"
+              too_short: "слишком короткий"
             current_password:
-              blank: "Не может быть пустым"
+              blank: "не может быть пустым"
+              invalid: "введён неверно"
             password_confirmation: 
-              confirmation: "Подтверждение пароля неверно"              
+              confirmation: "неверно"
+        calendar_event:
+          attributes:
+            name:
+              blank: "не может быть пустым"
+            date:
+              blank: "не может быть пустой"
     attributes:
+      calendar_event:
+        name: Название
+        date: Дата
       user:
         confirmation_sent_at: 
         confirmation_token: 

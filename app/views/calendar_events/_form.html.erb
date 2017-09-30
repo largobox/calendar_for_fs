@@ -1,0 +1,31 @@
+<%= form_for event do |f| %>
+
+	<div class = 'std-errors-cnt'>
+		<ul>
+			<% f.object.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+		</ul>
+	</div>
+
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
+	<div class = 'std-field'>
+		<%= f.label 'Название' %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class = 'std-field'>
+		<%= f.label 'Дата' %><br />
+    <%= f.date_field :date %>
+  </div>
+
+  <div class = 'std-field'>
+		<%= f.label 'Периодичность' %><br />
+    <%= f.select :periodicity, @period_types %>
+  </div>		    
+
+  <div class = 'std-btn'>
+    <%= f.submit 'Отправить' %>
+  </div>
+<% end %>
