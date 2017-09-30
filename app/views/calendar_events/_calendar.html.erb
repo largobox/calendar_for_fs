@@ -1,0 +1,47 @@
+<div class = 'event-years-cnt'>
+	<% @years_arr.each do |y| %>
+		<%= link_to y, root_path(year: y, month: @c_month) %>
+	<% end %>
+</div>
+
+<div class = 'event-months-cnt'>
+	<% @months_arr.each_with_index do |m, i| %>
+		<%= link_to m, root_path(year: @c_year, month: i+1) %>
+	<% end %>
+</div>
+
+<div class = 'event-table-cnt'>
+
+	<div class = 'event-table-header-cnt'>
+		<ul>
+			<% @day_names_arr.each do |d_name| %>
+				<li>
+					<%= d_name %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+
+	<div class = 'event-table-body-cnt'>
+		<ul>
+			<% @start_offset_range.each do |d| %>
+				<li class = 'event-table-cell disable-cell'>
+					<%= d %>
+				</li>
+			<% end %>	
+
+			<% @days_arr.each do |d| %>
+				<li class = 'event-table-cell'>
+					<%= d.day %>
+				</li>
+			<% end %>	
+
+			<% @end_offset_range.each do |d| %>
+				<li class = 'event-table-cell disable-cell'>
+					<%= d %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+
+</div>
