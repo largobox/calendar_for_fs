@@ -168,13 +168,13 @@
 }
 
 .event-list-actions-el.trash {
-	background-image: url('/assets/delete.svg');
+	background-image: image-url('/assets/delete.svg');
 }
 
 .event-list-actions-el.pencil {
-	background-image: url('/assets/edit.svg');
+	background-image: image-url('/assets/edit.svg');
 }
 
 .event-list-actions-el.document {
-	background-image: url('/assets/show.svg');
+	background-image: image-url('/assets/show.svg');
 }
