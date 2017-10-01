@@ -1,0 +1,19 @@
+<div class = 'std-form-cnt'>
+
+	<%= link_to 'Назад', :back %>
+
+	<h2>Страница события</h2>
+
+	<p>Название:</p>
+	<span><%= @event.name %></span>
+	
+	<p>Дата:</p>
+	<span><%= @event.date.strftime('%m-%d-%Y') %></span>
+
+	<p>Периодичность:</p>
+	<span><%= @event.periodicity %></span>
+
+	<p>Владелец:</p>
+	<span><%= @event.user.name + ' ' + @event.user.second_name %></span>
+
+</div>

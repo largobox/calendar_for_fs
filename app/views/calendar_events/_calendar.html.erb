@@ -11,7 +11,6 @@
 </div>
 
 <div class = 'event-table-cnt'>
-
 	<div class = 'event-table-header-cnt'>
 		<ul>
 			<% @day_names_arr.each do |d_name| %>
@@ -22,26 +21,35 @@
 		</ul>
 	</div>
 
-	<div class = 'event-table-body-cnt'>
-		<ul>
-			<% @start_offset_range.each do |d| %>
-				<li class = 'event-table-cell disable-cell'>
-					<%= d %>
-				</li>
-			<% end %>	
+<div class = 'event-table-body-cnt'>
+	<ul>
+		<% @start_offset_range.each do |d| %>
+			<li class = 'event-table-cell disable-cell'>
+				<%= d %>
+			</li>
+		<% end %>
 
-			<% @days_arr.each do |d| %>
-				<li class = 'event-table-cell'>
-					<%= d.day %>
-				</li>
-			<% end %>	
+		<% @pair_day_and_events.each do |pair| %>
+			<li class = 'event-table-cell'>
+				<div><%= pair[0].day %></div>
+				<% pair[1].each  do |event| %>
+					<% if event.user_id == current_user.id %>
+					  <%= link_to edit_calendar_event_path(event.id) do %>
+							<div class = 'event-cell-el green'><%= truncate(event.name, length: 20) %></div>
+					  <% end %>
+					<% else %>
+					  <%= link_to calendar_event_path(event.id) do %>
+							<div class = 'event-cell-el'><%= truncate(event.name, length: 20) %></div>
+					  <% end %>
+					<% end %>
+				<% end %>
+			</li>
+		<% end %>
 
-			<% @end_offset_range.each do |d| %>
-				<li class = 'event-table-cell disable-cell'>
-					<%= d %>
-				</li>
-			<% end %>
-		</ul>
-	</div>
-
+		<% @end_offset_range.each do |d| %>
+			<li class = 'event-table-cell disable-cell'>
+				<%= d %>
+			</li>
+		<% end %>
+	</ul>
 </div>

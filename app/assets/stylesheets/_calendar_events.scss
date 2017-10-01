@@ -88,17 +88,93 @@
 }
 
 .event-table-cell {
-	padding: 5px;
+	padding: 5px 0px;
 	border-radius: 4px;
 	font-size: 14px;
 	width: 110px;
 	box-sizing: border-box;
 	display: inline-block;
-	height: 120px;
+	min-height: 120px;
 	border: 1px solid $text_color;
 	margin-bottom: 8px;
 }
 
 .disable-cell {
 	opacity: .35;
+}
+
+.event-table-cell a {
+	text-decoration: none;
+	color: $text_color;
+}
+
+.event-cell-el {
+	font-size: 12px;
+	padding: 5px;
+	background-color: #62abc7;
+	margin-bottom: 4px;
+	opacity: .7;
+}
+
+.event-cell-el:hover {
+	opacity: 1;
+}
+
+.event-cell-el.green {
+	background-color: #8bd694;
+}
+
+.event-list-cnt li {
+	line-height: 30px;
+	height: 50px;
+	box-sizing: border-box;
+	background-color: $bg_color;
+	padding: 10px 20px;
+	border-radius: 6px;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;	
+}
+
+.event-list-cnt li:nth-child(1){
+	background-color: $text_color;
+	color: $bg_color
+}
+
+.event-list-cnt li span {
+	font-size: 14px;
+	display: inline-block;
+	width: 20%;
+}
+
+.event-list-actions-cnt {}
+
+.event-list-actions-cnt a {
+	display: inline-block;
+	text-decoration: none;
+	opacity: .7;
+}
+
+.event-list-actions-cnt a:hover {
+	opacity: 1;
+}
+
+.event-list-actions-el {
+	margin: 0px 5px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-size: contain;
+}
+
+.event-list-actions-el.trash {
+	background-image: url('delete.svg');
+}
+
+.event-list-actions-el.pencil {
+	background-image: url('edit.svg');
+}
+
+.event-list-actions-el.document {
+	background-image: url('show.svg');
 }

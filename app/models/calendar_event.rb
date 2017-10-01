@@ -1,7 +1,8 @@
 class CalendarEvent < ApplicationRecord
 	validates_presence_of :name, :date
-
 	validate :date_above_today?
+
+	belongs_to :user
 
 	PERIOD_TYPES = [
 		'День',

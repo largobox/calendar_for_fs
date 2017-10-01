@@ -6,7 +6,8 @@ Rails.application.routes.draw do
 
   resources :calendar_events do
 	  collection do
-	    get 'user_events/:user_id', action: :user_events, as: :user_events
+	    get 'list_events'
+	    get 'user_list_events'
 	  end
   end
 end

@@ -9,8 +9,13 @@
   </head>
 
   <body>
-    <p class = 'notice'><%= notice %></p>
-    <p class = 'alert'><%= alert %></p>
+    <% if notice %>
+      <p class = 'notice'><%= notice %></p>
+    <% end %>
+
+    <% if alert %>
+      <p class = 'alert'><%= alert %></p>
+    <% end %>
 
   	<div class = 'app-cnt'>
   		<header>
@@ -20,8 +25,9 @@
         <nav>
   				<ul>
           <% if current_user %>
-            <li><%= link_to 'Мои события', user_events_calendar_events_path(current_user.id) %></li>
-            <li><%= link_to 'Календарь', root_path %></li>
+            <li><%= link_to 'Мои события', user_list_events_calendar_events_path %></li>
+            <li><%= link_to 'Все события', list_events_calendar_events_path %></li>
+            <li><%= link_to 'Календарь событий', root_path %></li>
             <li><%= link_to 'Профиль', edit_user_registration_path %></li>
             <li><%= link_to 'Выйти', destroy_user_session_path, method: :delete %></li>
           <% else %>

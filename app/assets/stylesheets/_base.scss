@@ -41,7 +41,13 @@ a:hover {
 	border-radius: 6px;
 }
 
+.std-form-cnt p {
+	font-weight: bold;
+	margin-top: 8px;
+}
+
 .std-form-cnt h2 {
+	margin-bottom: 10px;
 	text-align: center;
 }
 
@@ -84,5 +90,19 @@ input[type='submit']:hover {
 }
 
 .notice {
+	margin: 5px;
+	padding: 8px 12px;
+	border-radius: 6px;
 	font-size: 14px;
+	background-color: #8bd694;
+	position: absolute;
+}
+
+.alert {
+	margin: 5px;
+	padding: 8px 12px;
+	border-radius: 6px;
+	font-size: 14px;
+	background-color: #fd7b7b;
+	position: absolute;
 }

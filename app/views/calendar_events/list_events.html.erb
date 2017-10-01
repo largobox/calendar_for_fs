@@ -1,14 +1,14 @@
 <div class = 'event-top-cnt'>
-	<h3>Мои события</h3>
+	<h3>Все события</h3>
 	<%= link_to 'Создать событие', new_calendar_event_path %>
 </div>
 
 <div class = 'event-bot-cnt'>
 
 	<% if @events.size != 0 %>
-		<%= render 'calendar', events: @events %>
+		<%= render 'list', events: @events %>
 	<% else %>
-		<h2>У вас нет событий</h2>
+		<h2>Нет событий</h2>
 	<% end %>
 
 </div>
