@@ -172,9 +172,9 @@
 }
 
 .event-list-actions-el.pencil {
-	background-image: image-url('/assets/edit.svg');
+	background-image: image-url('/assets/edit.png');
 }
 
 .event-list-actions-el.document {
-	background-image: image-url('/assets/show.svg');
+	background-image: url('<%= asset_path("show.png") %>');
 }
