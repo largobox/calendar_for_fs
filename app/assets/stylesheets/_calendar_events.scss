@@ -168,7 +168,7 @@
 }
 
 .event-list-actions-el.trash {
-	background-image: image-url('/assets/delete.svg');
+	background-image:  url('<%= asset_path("delete.svg") %>');
 }
 
 .event-list-actions-el.pencil {
