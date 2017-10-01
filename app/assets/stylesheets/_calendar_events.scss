@@ -168,13 +168,13 @@
 }
 
 .event-list-actions-el.trash {
-	background-image:  url('<%= asset_path("delete.svg") %>');
+	background-image: url('delete.svg');
 }
 
 .event-list-actions-el.pencil {
-	background-image: image-url('/assets/edit.png');
+	background-image: url('edit.svg');
 }
 
 .event-list-actions-el.document {
-	background-image: url('<%= asset_path("show.png") %>');
+	background-image: url('show.svg');
 }
